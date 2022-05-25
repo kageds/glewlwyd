@@ -1,0 +1,451 @@
+{
+  "GlewlwydUrl": "./",
+  "ProfileUrl": "profile.html",
+  "AdminUrl": "index.html",
+  "LoginUrl": "login.html",
+  "CallbackPage": "callback.html",
+  "PasswordMinLength": 8,
+  "lang": ["de", "en","fr","nl"],
+  "pattern": {
+    "user": [{
+      "name": "username",
+      "edit": false,
+      "label": "admin.user-username",
+      "placeholder": "admin.user-username-ph",
+      "forceShow": true,
+      "required": true,
+      "profile-read": true,
+      "profile-write": false
+    },{
+      "name": "password",
+      "type": "password",
+      "profile": false,
+      "edit": true,
+      "label": "admin.user-password",
+      "placeholder": "admin.user-password-ph",
+      "placeholderConfirm": "admin.user-password-confirm-ph",
+      "forceShow": true,
+      "required": true,
+      "profile-read": false,
+      "profile-write": false
+    },{
+      "name": "name",
+      "profile": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.user-name",
+      "placeholder": "admin.user-name-ph",
+      "profile-read": true,
+      "profile-write": true
+    },{
+      "name": "email",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.user-email",
+      "placeholder": "admin.user-email-ph",
+      "profile-read": true,
+      "profile-write": false
+    },{
+      "name": "picture",
+      "list": false,
+      "type": "image/image",
+      "forceShow": true,
+      "edit": true,
+      "label": "admin.user-picture",
+      "profile-read": true,
+      "profile-write": false
+    },{
+      "name": "scope",
+      "list": true,
+      "forceShow": true,
+      "edit": true,
+      "label": "admin.user-scope",
+      "profile-read": true,
+      "profile-write": false
+    },{
+      "name": "scsas_list",
+      "list": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.user-scsas_list",
+      "profile-read": true,
+      "profile-write": false
+    },{
+      "name": "enabled",
+      "type": "boolean",
+      "defaultValue": true,
+      "forceShow": true,
+      "edit": true,
+      "label": "admin.user-enabled"
+    }],
+    "client": [{
+      "name": "client_id",
+      "edit": false,
+      "forceShow": true,
+      "label": "admin.client-clientid",
+      "placeholder": "admin.client-clientid-ph",
+      "required": true
+    },{
+      "name": "name",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-name",
+      "placeholder": "admin.client-name-ph"
+    },{
+      "name": "enabled",
+      "type": "boolean",
+      "defaultValue": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-enabled"
+    },{
+      "name": "scope",
+      "list": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-scope"
+    },{
+      "name": "scsas_list",
+      "list": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-scsas_list"
+    },{
+      "name": "redirect_uri",
+      "list": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-redirect-uri",
+      "placeholder": "admin.client-redirect-uri-ph"
+    },{
+      "name": "authorization_type",
+      "list": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-authorization-type",
+      "listElements": ["code","token","id_token","password","none","client_credentials","refresh_token","delete_token","device_authorization","urn:openid:params:grant-type:ciba"]
+    },{
+      "name": "response_mode",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-response_mode",
+      "listElements": ["query","fragment","form_post","query.jwt","fragment.jwt","form_post.jwt"]
+    },{
+      "name": "sector_identifier_uri",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-sector-identifier-uri",
+      "placeholder": "admin.client-sector-identifier-uri-ph"
+    },{
+      "name": "confidential",
+      "edit": true,
+      "defaultValue": false,
+      "forceShow": true,
+      "type": "boolean",
+      "label": "admin.client-confidential"
+    },{
+      "name": "token_endpoint_auth_method",
+      "list": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-token_endpoint_auth_method",
+      "listElements": ["", "none", "client_secret_post", "client_secret_basic", "client_secret_jwt", "private_key_jwt", "tls_client_auth", "self_signed_tls_client_auth"]
+    },{
+      "name": "client_secret",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-secret",
+      "placeholder": "admin.client-secret-ph"
+    },{
+      "name": "password",
+      "type": "password",
+      "profile": false,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-password",
+      "placeholder": "admin.client-password-ph",
+      "placeholderConfirm": "admin.client-password-confirm-ph"
+    },{
+      "name": "jwks",
+      "type": "jwks",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-jwks",
+      "placeholder": "admin.client-jwks-ph"
+    },{
+      "name": "jwks_uri",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-jwks_uri",
+      "placeholder": "admin.client-jwks_uri-ph"
+    },{
+      "name": "pubkey",
+      "type": "file",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-pubkey"
+    },{
+      "name": "enc",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-enc",
+      "placeholder": "admin.client-enc-ph",
+      "listElements": ["A128CBC-HS256","A192CBC-HS384","A256CBC-HS512","A128GCM","A192GCM","A256GCM"]
+    },{
+      "name": "alg",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-alg",
+      "placeholder": "admin.client-alg-ph",
+      "listElements": ["RSA1_5","RSA-OAEP","RSA-OAEP-256","A128KW","A192KW","A256KW","dir","ECDH-ES","ECDH-ES+A128KW","ECDH-ES+A192KW","ECDH-ES+A256KW","A128GCMKW","A192GCMKW","A256GCMKW","PBES2-HS256+A128KW","PBES2-HS384+A192KW","PBES2-HS512+A256KW"]
+    },{
+      "name": "alg_kid",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-alg_kid",
+      "placeholder": "admin.client-alg_kid-ph"
+    },{
+      "name": "encrypt_code",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-encrypt_code",
+      "listElements": ["no","yes"]
+    },{
+      "name": "encrypt_at",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-encrypt_at",
+      "listElements": ["no","yes"]
+    },{
+      "name": "encrypt_userinfo",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-encrypt_userinfo",
+      "listElements": ["no","yes"]
+    },{
+      "name": "encrypt_id_token",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-encrypt_id_token",
+      "listElements": ["no","yes"]
+    },{
+      "name": "encrypt_refresh_token",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-encrypt_refresh_token",
+      "listElements": ["no","yes"]
+    },{
+      "name": "resource",
+      "edit": true,
+      "forceShow": true,
+      "type": "textarea",
+      "list": true,
+      "label": "admin.client-resource"
+    },{
+      "name": "authorization_data_types",
+      "list": true,
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-authorization-data-types",
+      "placeholder": "admin.client-authorization-data-types-ph"
+    },{
+      "name": "tls_client_auth_san_dns",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-tls_client_auth_san_dns",
+      "placeholder": "admin.client-tls_client_auth_san_dns-ph"
+    },{
+      "name": "tls_client_auth_san_uri",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-tls_client_auth_san_uri",
+      "placeholder": "admin.client-tls_client_auth_san_uri-ph"
+    },{
+      "name": "tls_client_auth_san_ip",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-tls_client_auth_san_ip",
+      "placeholder": "admin.client-tls_client_auth_san_ip-ph"
+    },{
+      "name": "tls_client_auth_san_email",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-tls_client_auth_san_email",
+      "placeholder": "admin.client-tls_client_auth_san_email-ph"
+    },{
+      "name": "backchannel_token_delivery_mode",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_token_delivery_mode",
+      "listElements": ["poll","ping","push"]
+    },{
+      "name": "backchannel_client_notification_endpoint",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_client_notification_endpoint",
+      "placeholder": "admin.client-backchannel_client_notification_endpoint-ph"
+    },{
+      "name": "backchannel_user_code_parameter",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_user_code_parameter",
+      "listElements": ["no","yes"]
+    },{
+      "name": "request_object_signing_alg",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-request_object_signing_alg",
+      "listElements": ["HS256","HS384","HS512","RS256","RS384","RS512","ES256","ES384","ES512","PS256","PS384","PS512","EdDSA","ES256K"]
+    },{
+      "name": "request_object_encryption_enc",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-request_object_encryption_enc",
+      "listElements": ["A128CBC-HS256","A192CBC-HS384","A256CBC-HS512","A128GCM","A192GCM","A256GCM"]
+    },{
+      "name": "request_object_encryption_alg",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-request_object_encryption_alg",
+      "listElements": ["RSA1_5","RSA-OAEP","RSA-OAEP-256","A128KW","A192KW","A256KW","ECDH-ES","ECDH-ES+A128KW","ECDH-ES+A192KW","ECDH-ES+A256KW","A128GCMKW","A192GCMKW","A256GCMKW","PBES2-HS256+A128KW","PBES2-HS384+A192KW","PBES2-HS512+A256KW"]
+    },{
+      "name": "token_endpoint_signing_alg",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-token_endpoint_signing_alg",
+      "listElements": ["HS256","HS384","HS512","RS256","RS384","RS512","ES256","ES384","ES512","PS256","PS384","PS512","EdDSA","ES256K"]
+    },{
+      "name": "token_endpoint_encryption_enc",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-token_endpoint_encryption_enc",
+      "listElements": ["A128CBC-HS256","A192CBC-HS384","A256CBC-HS512","A128GCM","A192GCM","A256GCM"]
+    },{
+      "name": "token_endpoint_encryption_alg",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-token_endpoint_encryption_alg",
+      "listElements": ["RSA1_5","RSA-OAEP","RSA-OAEP-256","A128KW","A192KW","A256KW","ECDH-ES","ECDH-ES+A128KW","ECDH-ES+A192KW","ECDH-ES+A256KW","A128GCMKW","A192GCMKW","A256GCMKW","PBES2-HS256+A128KW","PBES2-HS384+A192KW","PBES2-HS512+A256KW"]
+    },{
+      "name": "backchannel_authentication_request_signing_alg",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_authentication_request_signing_alg",
+      "listElements": ["HS256","HS384","HS512","RS256","RS384","RS512","ES256","ES384","ES512","PS256","PS384","PS512","EdDSA","ES256K"]
+    },{
+      "name": "backchannel_authentication_request_encryption_enc",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_authentication_request_encryption_enc",
+      "listElements": ["A128CBC-HS256","A192CBC-HS384","A256CBC-HS512","A128GCM","A192GCM","A256GCM"]
+    },{
+      "name": "backchannel_authentication_request_encryption_alg",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_authentication_request_encryption_alg",
+      "listElements": ["RSA1_5","RSA-OAEP","RSA-OAEP-256","A128KW","A192KW","A256KW","ECDH-ES","ECDH-ES+A128KW","ECDH-ES+A192KW","ECDH-ES+A256KW","A128GCMKW","A192GCMKW","A256GCMKW","PBES2-HS256+A128KW","PBES2-HS384+A192KW","PBES2-HS512+A256KW"]
+    },{
+      "name": "post_logout_redirect_uri",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-post_logout_redirect_uri",
+      "placeholder": "admin.client-post_logout_redirect_uri-ph"
+    },{
+      "name": "frontchannel_logout_uri",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-frontchannel_logout_uri",
+      "placeholder": "admin.client-frontchannel_logout_uri-ph"
+    },{
+      "name": "frontchannel_logout_session_required",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-frontchannel_logout_session_required",
+      "listElements": ["no","yes"]
+    },{
+      "name": "backchannel_logout_uri",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_logout_uri",
+      "placeholder": "admin.client-backchannel_logout_uri-ph"
+    },{
+      "name": "backchannel_logout_session_required",
+      "edit": true,
+      "forceShow": true,
+      "label": "admin.client-backchannel_logout_session_required",
+      "listElements": ["no","yes"]
+    }]
+  },
+  "defaultScheme": "",
+  "sessionSchemes": [
+  ],
+  "profilePicture": {
+    "property": "picture",
+    "type": "image/*"
+  },
+  "register": [
+  ],
+  "register-complete": [
+  ],
+  "providerMainstreamList": [
+    {
+      "help_url": "https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/",
+      "name": "Facebook",
+      "logo_fa": "fab fa-facebook",
+      "provider_type": "oauth2",
+      "response_type": "code",
+      "userinfo_endpoint": "https://graph.facebook.com/v5.0/me",
+      "auth_endpoint": "https://www.facebook.com/v5.0/dialog/oauth",
+      "token_endpoint": "https://graph.facebook.com/v5.0/oauth/access_token",
+      "userid_property": "id"
+    },
+    {
+      "help_url": "https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/",
+      "name": "GitHub",
+      "logo_fa": "fab fa-github",
+      "provider_type": "oauth2",
+      "response_type": "code",
+      "userinfo_endpoint": "https://api.github.com/user",
+      "auth_endpoint": "https://github.com/login/oauth/authorize",
+      "token_endpoint": "https://github.com/login/oauth/access_token",
+      "scope": "read:user",
+      "userid_property": "id"
+    },
+    {
+      "help_url": "https://docs.gitlab.com/ee/integration/oauth_provider.html",
+      "name": "GitLab",
+      "logo_fa": "fab fa-gitlab",
+      "provider_type": "oauth2",
+      "response_type": "code",
+      "userinfo_endpoint": "https://gitlab.com/api/v4/user",
+      "auth_endpoint": "https://gitlab.com/oauth/authorize",
+      "token_endpoint": "https://gitlab.com/oauth/token",
+      "scope": "read_user profile",
+      "userid_property": "id"
+    },
+    {
+      "help_url": "https://developers.google.com/identity/protocols/OAuth2",
+      "name": "Google",
+      "logo_fa": "fab fa-google",
+      "provider_type": "oidc",
+      "response_type": "code",
+      "config_endpoint": "https://accounts.google.com/.well-known/openid-configuration"
+    },
+    {
+      "help_url": "https://developer.yahoo.com/oauth2/guide/openid_connect/getting_started.html",
+      "name": "Yahoo",
+      "logo_fa": "fab fa-yahoo",
+      "provider_type": "oidc",
+      "response_type": "code",
+      "config_endpoint": "https://api.login.yahoo.com/.well-known/openid-configuration"
+    },
+    {
+      "help_url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-protocols-oauth-code#register-your-application-with-your-ad-tenant",
+      "name": "Microsoft",
+      "logo_fa": "fab fa-windows",
+      "provider_type": "oidc",
+      "response_type": "code",
+      "config_endpoint": "https://login.microsoftonline.com/{tenantid}/.well-known/openid-configuration"
+    }
+  ]
+}
